@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}نمایش آیتم‌ها {% endblock %}
+
+{% block content %}
+<div class="card">
+
+    {% for x in all %}
+        {% comment %} <a href="/home/detail/{{ x.id }}"><h3>{{x.title}}</h3></a> {% endcomment %}
+        <a class="card-body" href="{% url 'detail' x.id %}"><h3>{{ x.title }}</h3></a>
+
+
+    {% endfor %}
+</div>  
+{% endblock %}
+

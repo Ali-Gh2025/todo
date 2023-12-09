@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% comment %} {% block title %} Home {% endblock %} {% endcomment %}
+
+{% block content %}
+    <h3> Create Todo </h3>
+    <br/>
+    
+    <form method="post" action="">
+        {% csrf_token %}
+
+        {% comment %} Bydefault is as_tale {% endcomment %}
+        {{ form.as_p }}               
+
+        <input type="submit" value="create">
+    </form>
+
+{% endblock %}
